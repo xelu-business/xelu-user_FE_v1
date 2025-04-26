@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { xelu } from "../../assets";
+import { xeluIcon } from "../../assets";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "./Button";
@@ -30,7 +30,7 @@ export const Header = () => {
   return (
     <HeaderContainer>
       <LogoField onClick={() => navigate("/")}>
-        <LogoImg src={xelu} alt="로고" />
+        <LogoImg src={xeluIcon} alt="로고" />
       </LogoField>
 
       <NavigationWrapper>
@@ -86,7 +86,6 @@ const HeaderContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #dddbdb;
   padding: 10px 20px;
   box-sizing: border-box;
   z-index: 1000;
@@ -138,6 +137,7 @@ const NavContent = styled.div`
 
   &:hover {
     color: #666;
+    transform: translateY(-2px);
   }
 `;
 
