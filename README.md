@@ -1,54 +1,17 @@
-# React + TypeScript + Vite
+# Xelu
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+xelu는 아이디어와 열정을 가진 모든 사람들을 위한 프로젝트 오픈 스페이스입니다. 🚀
+누구나 자신의 프로젝트를 등록할 수 있고, 다른 사람들의 프로젝트를 자유롭게 둘러보며 영감을 얻을 수 있습니다. 🌎
 
-Currently, two official plugins are available:
+1. 프로젝트를 소개하고 싶나요? 🔥
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. 함께할 사람을 찾고 싶나요? 🤝
 
-## Expanding the ESLint configuration
+3. 세상에 당신의 아이디어를 알리고 싶나요? 🌟
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## xelu에서는 누구나 주인공이 될 수 있습니다.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+"모든 시작은 가능성에서 온다."
+우리는 작은 아이디어라도 소중히 생각하며, 연결과 성장을 통해 새로운 가능성을 열어갑니다. 🌱
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+당신의 프로젝트를 세상에 공개하고, 함께 성장하는 여정에 참여해보세요
