@@ -62,7 +62,7 @@ const ButtonContainer = styled.button<ButtonType>`
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   &:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
     background-color: ${(props) => props.hoverBackgroundColor || "#5a5a5a"};
   }
