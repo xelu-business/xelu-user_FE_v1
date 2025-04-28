@@ -1,19 +1,22 @@
 import styled from "@emotion/styled";
-import { Post } from "./Post";
 
 export const Allpost = () => {
-  return (
-    <AllpostContainer>
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-    </AllpostContainer>
-  );
+  return <AllpostContainer></AllpostContainer>;
 };
 
 const AllpostContainer = styled.div`
-  margin-top: 100px;
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  padding: 0 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+
+  @media (max-width: 770px) {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
 `;
