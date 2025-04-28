@@ -8,9 +8,10 @@ export const Header = () => {
   const navigate = useNavigate();
   const [iseLogin, setIsLogin] = useState<boolean>(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
 
   const navData = [
-    { name: "게시판 생성", path: "/create-board" },
+    { name: "프로젝트 생성", path: "/create-project" },
     { name: "마이페이지", path: "/mypage" },
   ];
 
