@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { xeluIcon } from "../../assets";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "./Button";
 
@@ -8,7 +8,23 @@ export const Header = () => {
   const navigate = useNavigate();
   const [iseLogin, setIsLogin] = useState<boolean>(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
+  const [scrolled, setScrolled] = useState<boolean>(false);
+
+  // 헤더 스크롤 로직
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 0;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrolled]);
 
   const navData = [
     { name: "프로젝트 생성", path: "/create-project" },
@@ -29,7 +45,7 @@ export const Header = () => {
   };
 
   return (
-    <HeaderContainer>
+    <HeaderContainer isScrolled={scrolled}>
       <LogoField onClick={() => navigate("/")}>
         <LogoImg src={xeluIcon} alt="로고" />
       </LogoField>
@@ -78,7 +94,7 @@ export const Header = () => {
   );
 };
 
-const HeaderContainer = styled.div`
+const HeaderContainer = styled.div<{ isScrolled: boolean }>`
   width: 100%;
   height: 55px;
   display: flex;
@@ -91,6 +107,14 @@ const HeaderContainer = styled.div`
   box-sizing: border-box;
   z-index: 1000;
   font-weight: bold;
+  transition: all 0.2s ease;
+  background-color: ${(props) =>
+    props.isScrolled
+      ? "rgba(255, 255, 255, 0.85)"
+      : "rgba(255, 255, 255, 0.7)"};
+  backdrop-filter: ${(props) => (props.isScrolled ? "blur(2px)" : "none")};
+  border-bottom: ${(props) =>
+    props.isScrolled ? "1px solid #d8d8d8" : "none"};
 
   @media (max-width: 768px) {
     padding: 10px;

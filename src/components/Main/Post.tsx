@@ -20,19 +20,33 @@ export const Post = () => {
           스페이스입니다. 🚀 누구나 자신의 프로젝트를 등록할 수 있고, 다른
           사람들의 프로젝트를 자유롭게 둘러보며 영감을 얻을 수 있습니다. 🌎
         </IntroProject>
+        <DateContainer>
+          <DateAll>2025.5.12</DateAll>
+        </DateContainer>
       </Description>
     </PostContainer>
   );
 };
 
+const DateAll = styled.div``;
+
+const DateContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-top: 15px;
+  font-size: 12px;
+  color: #8c8c8c;
+`;
+
 const IntroProject = styled.div`
   height: 150px;
   line-height: 1.5em;
-  max-height: 6em;
+  max-height: 4.5em;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   white-space: normal;
 `;
@@ -85,4 +99,5 @@ const PostContainer = styled.div`
   padding: 25px;
   box-shadow: 0 0 10px #bfbfbf;
   margin-bottom: 10px;
+  overflow: hidden;
 `;
