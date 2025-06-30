@@ -27,6 +27,7 @@ export const Header = () => {
   }, [scrolled]);
 
   const navData = [
+    { name: "프로젝트s", path: "/" },
     { name: "프로젝트 생성", path: "/create-project" },
     { name: "마이페이지", path: "/mypage" },
   ];
